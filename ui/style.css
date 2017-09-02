@@ -1,5 +1,7 @@
 body {
-    background-color: lightblue;
+    font-family: sans-serif;
+    background-color: lightgrey;
+    margin-top: 75px;
 }
 
 .center {
@@ -16,25 +18,4 @@ body {
 
 .img-medium {
     height: 200px;
-}
-
-
-h1 {
-    color: white;
-    text-align: center;
-}
-
-
-
-	.container{
-
-padding-left: 60px;
-padding-top: 60px;
-padding-right: 60px;
- 
-}
-
-p {
-    font-family: verdana;
-    font-size: 20px;
 }
