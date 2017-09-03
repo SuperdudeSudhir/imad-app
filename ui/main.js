@@ -14,6 +14,6 @@
 	        marginLeft = marginLeft = 10;
 	img.style.marginLeft = marginLeft = 'px';        
 	    }
-	img.onclick = function(){
+ madi.onclick = function(){
 var Interval = setInterval(moveRight,100);
 	};
