@@ -9,5 +9,5 @@
 	madi.onclick = function()
 	{
 
-		madi.style.marginleft = '100px';
+		img.style.marginleft = '100px';
 	};
