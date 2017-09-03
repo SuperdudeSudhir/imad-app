@@ -6,8 +6,14 @@
 
 	var img = document.getElementById("madi");
 
-	madi.onclick = function()
-	{
-
-		img.style.marginleft = '100px';
+	
+	var marginRight = 0;
+	   
+	    function moveRight()
+	    {
+	        marginLeft = marginLeft = 10;
+	img.style.marginLeft = marginLeft = 'px';        
+	    }
+	img.onclick = function(){
+var Interval = setInterval(moveRight,100);
 	};
