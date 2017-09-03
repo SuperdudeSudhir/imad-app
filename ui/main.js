@@ -7,7 +7,7 @@
 	var img = document.getElementById("madi");
 
 	
-	var marginRight = 0;
+	var marginLeft = 0;
 	   
 	    function moveRight()
 	    {
@@ -15,5 +15,5 @@
 	img.style.marginLeft = marginLeft = 'px';        
 	    }
  madi.onclick = function(){
-var Interval = setInterval(moveRight,100);
+var Interval = setInterval(moveRight, 100);
 	};
