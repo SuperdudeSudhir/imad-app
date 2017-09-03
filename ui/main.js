@@ -1,17 +1,30 @@
 
 var button = document.getElementById("counter");
-var counter=0;
 
-button.onclick = function(){
+button.onclick = function()
+{
     
+    //creates a a request
+    var request = new XMLHttpRequest();
     
-    //FIRST MAKES A REQUEST TO  COUNTER POINT
     
     //CAPTURE RESPONSE
+    request.onreadystatechange = function ()
+    {
+    if (request.readyState === XMLHttpRequest.DONE)
+    {
+        //RENDER IN CORRECTT SPAN
+        
+        
+        if(request.status === 200){
+var counter =  request.responseText;
+var span = document.getElementById('count');
+span.innerHTML = counter.toString();
+    }
     
-    //RENDER IN CORRECTT SPAN
-    
-    counter = counter +1;
-    var span = document.getElementById('count');
-    span.innerHTML = counter.toString();
-}
+    }
+};
+
+request.open('GET','http://http://sdhrsingh271.imad.hasura-app.io/',true);
+request.send(null);
+};
