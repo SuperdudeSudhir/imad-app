@@ -1,19 +1,17 @@
-	console.log('Loaded!');
-	//change the text of the main-text div
-	var element = document.getElementById('main-text');
-	element.InnerHTML = "New Value";
-	//move the image
 
-	var img = document.getElementById("madi");
+var button = document.getElementById("counter");
+var counter=0;
 
-	
-	var marginLeft = 0;
-	   
-	    function moveRight()
-	    {
-	        marginLeft = marginLeft = 10;
-	img.style.marginLeft = marginLeft = 'px';        
-	    }
- madi.onclick = function(){
-var Interval = setInterval(moveRight, 100);
-	};
+button.onclick = function(){
+    
+    
+    //FIRST MAKES A REQUEST TO  COUNTER POINT
+    
+    //CAPTURE RESPONSE
+    
+    //RENDER IN CORRECTT SPAN
+    
+    counter = counter +1;
+    var span = document.getElementById('count');
+    span.innerHTML = counter.toString();
+}
