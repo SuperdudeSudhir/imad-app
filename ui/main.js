@@ -26,6 +26,6 @@ span.innerHTML = counter.toString();
     }
 };
 
-request.open('GET','http://sdhrsingh271.imad.hasura-app.io/ui/article-two.html',true);
+request.open('GET','http://sdhrsingh271.imad.hasura-app.io/article-one.html',true);
 request.send(null);
 };
