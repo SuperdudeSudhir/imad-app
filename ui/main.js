@@ -25,6 +25,6 @@ span.innerHTML = counter.toString();
     }
 };
 
-request.open('GET','http://sdhrsingh271.imad.hasura-app.io/counter',true);
+request.open('GET','http://sdhrsingh271.imad.hasura-app.io/',true);
 request.send(null);
 };
