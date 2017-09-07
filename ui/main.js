@@ -6,7 +6,7 @@ button.onclick = function()
     
     //creates a a request
     var request = new XMLHttpRequest();
-    
+    var counter = counter +1;
     
     //CAPTURE RESPONSE
     request.onreadystatechange = function ()
@@ -17,8 +17,7 @@ button.onclick = function()
         
         
         if(request.status === 200){
-        var counter = 1;
-//counter =  request.responseText;
+counter =  request.responseText;
 var span = document.getElementById('count');
 span.innerHTML = counter.toString();
     }
