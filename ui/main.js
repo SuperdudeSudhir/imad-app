@@ -1,12 +1,12 @@
 
 var button = document.getElementById("counter");
-
+var counter = 0;
 button.onclick = function()
 {
     
     //creates a a request
     var request = new XMLHttpRequest();
-    var counter = counter +1;
+    counter = counter +1;
     
     //CAPTURE RESPONSE
     request.onreadystatechange = function ()
