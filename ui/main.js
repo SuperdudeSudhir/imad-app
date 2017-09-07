@@ -6,12 +6,12 @@ button.onclick = function()
     
     //creates a a request
     var request = new XMLHttpRequest();
-    counter = counter +1;
     
     //CAPTURE RESPONSE
     request.onreadystatechange = function ()
     {
     if (request.readyState === XMLHttpRequest.DONE)
+    counter = counter +1;
     {
         //RENDER IN CORRECTT SPAN
         
