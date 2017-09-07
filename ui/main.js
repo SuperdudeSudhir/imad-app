@@ -11,7 +11,7 @@ button.onclick = function()
     request.onreadystatechange = function ()
     {
     if (request.readyState === XMLHttpRequest.DONE)
-    counter = counter +1;
+    counter = counter +2;
     {
         //RENDER IN CORRECTT SPAN
         
