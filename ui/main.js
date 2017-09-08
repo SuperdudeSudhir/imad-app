@@ -4,7 +4,7 @@ var counter = 0;
 button.onclick = function()
 {
     
-    //creates a a request
+   // creates a a request
     //var request = new XMLHttpRequest();
     
     //CAPTURE RESPONSE
@@ -23,7 +23,7 @@ var span = document.getElementById('count');
 span.innerHTML = counter.toString();
  //   }
   //  
-   // }
+   // } 
 //};
 
 //request.open('GET','http://sdhrsingh271.imad.hasura-app.io/',true);
