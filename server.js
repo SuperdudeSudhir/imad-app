@@ -1,7 +1,15 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+const { Pool, Client } = require('pg');
 
+const pool = new Pool({
+  user: 'sdhrsingh271',
+  host: 'http://db.imad.hasura-app.io',
+  database: 'sdhrsingh271',
+  password: DB.PASSWORD,
+  port: 5432,
+});
 var app = express();
 app.use(morgan('combined'));
 
@@ -14,6 +22,9 @@ app.get('/', function (req, res) {
  // res.send(counter.toString());
     
 //});
+app.get('/test-db',function(req,res){
+    
+});
 
 
 app.get('/article-one' ,function (req, res){
