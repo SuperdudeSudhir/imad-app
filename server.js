@@ -1,35 +1,15 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var Pool= require('pg').Pool;
 
-
-const { Pool, Client } = require('pg');
-
-// pools will use environment variables
-// for connection information
-const pool = new Pool();
-
-pool.query('SELECT NOW()', (err, res) => {
-  console.log(err, res);
-  {
-      
-      
-      
-  }
-  pool.end();
-});
-
-// you can also use async/await;
-const res = await.pool.query('SELECT *FROM test');
-await.pool.end();
-
-// clients will also use environment variables
-// for connection information
-const client = new Client();
-await.client.connect();
-
-const res = await.client.query('SELECT *FROM test');
-await.client.end();
+var config  = {
+HOST    :'sdhrsingh271',
+USER:'sdhrsingh271',
+DATABASE:'db.iamd.hasura.io',
+PORT : '5432',
+PASSWORD: process.env.DB.PASSWORD    
+};
 
 
 
@@ -40,6 +20,23 @@ await.client.end();
             app.get('/', function (req, res) {
               res.sendFile(path.join(__dirname, 'ui', 'index.html'));
             });
+var Pool =new Pool(config);
+app.get('/test-db',function(req,res){
+    
+    Pool.query('SELECT *FROM test' ,function(err,result){
+        
+     if(err){
+         res.status(500).send(err.toString());
+         
+     }   
+     else{
+         
+         res.send(JSON.stringify(result));
+     }
+    });
+});
+
+
 //var counter = 0;
 //app.get('/counter', function (req, res){
  // counter = counter+1;
@@ -47,14 +44,7 @@ await.client.end();
     
 //});
 
-var config{
-    PGHOST='db.imad.hasura.io';
-PGUSER='sdhrsingh271';
-PGDATABASE='sdhrsingh271';
-PGPASSWORD= '1042616258S';
-PGPORT=5432;
-    
-}
+
 
 app.get('/article-one' ,function (req, res){
   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
