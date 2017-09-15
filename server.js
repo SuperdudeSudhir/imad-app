@@ -51,7 +51,7 @@ var config{
     PGHOST='db.imad.hasura.io';
 PGUSER='sdhrsingh271';
 PGDATABASE='sdhrsingh271';
-PGPASSWORD= process.env.DB.PASSWORD;
+PGPASSWORD= '1042616258S';
 PGPORT=5432;
     
 }
