@@ -8,7 +8,7 @@ HOST    :'sdhrsingh271',
 USER:'sdhrsingh271',
 DATABASE:'db.iamd.hasura.io',
 PORT : '5432',
-PASSWORD: process.env.DB.PASSWORD    
+PASSWORD:'1042616258s'   
 };
 
 var Pool =new Pool(config);
