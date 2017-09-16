@@ -12,17 +12,18 @@ PASSWORD:'1042616258s'
 };
 
 var Pool =new Pool(config);
-app.get('/test-db',function(req,res){
-    
-    Pool.query('SELECT *FROM test' ,function(err,result){
+app.get('/test-db',function(req,res)
+    {
         
-     if(err){
-         res.status(500).send(err.toString());
-         
-     }   
-     else{
-         
-         res.send(JSON.stringify(result));
+        Pool.query('SELECT *FROM test' ,function(err,result){
+            
+         if(err){
+             res.status(500).send(err.toString());
+             
+         }   
+         else{
+             
+             res.send(JSON.stringify(result));
      }
     });
 });
