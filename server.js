@@ -14,7 +14,7 @@ var config  = {
 HOST    :'sdhrsingh271',
 USER:'sdhrsingh271',
 DATABASE:'db.imad.hasura.io',
-PORT : '80',
+PORT : '5432',
 PASSWORD:'1042616258s'   
 };
 
