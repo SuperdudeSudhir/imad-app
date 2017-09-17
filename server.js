@@ -8,7 +8,7 @@ var path = require('path');
  // res.send(counter.toString());
     
 
-var Pool= require('pg').pool;
+var Pool= require('pg').Pool;
 
 var config  = {
 HOST    :'sdhrsingh271',
