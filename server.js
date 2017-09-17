@@ -19,7 +19,7 @@ PASSWORD:'1042616258s'
 };
 
 var pool =new Pool(config);
-app.get('/test-db',function(req,res)
+app.get('',function(req,res)
     {
         
         pool.query('SELECT *FROM test' ,function(err,result){
