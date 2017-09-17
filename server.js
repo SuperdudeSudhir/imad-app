@@ -8,6 +8,34 @@ var path = require('path');
  // res.send(counter.toString());
     
 
+var Pool= require('pg').Pool;
+
+var config  = {
+HOST    :'sdhrsingh271',
+USER:'sdhrsingh271',
+DATABASE:'db.imad.hasura.io',
+PORT : '80',
+PASSWORD:'1042616258s'   
+};
+
+var Pool =new Pool(config);
+app.get('/test-db',function(req,res)
+    {
+        
+        Pool.query('SELECT *FROM test' ,function(err,result){
+            
+         if(err){
+             res.status(500).send(err.toString());
+             
+         }   
+         else{
+             
+             res.send(JSON.stringify(result));
+     }
+    });
+});
+
+
 
 
            var app = express();
