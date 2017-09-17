@@ -18,7 +18,7 @@ PORT : "5432",
 PASSWORD:'1042616258s'   
 };
 
-
+var pool =new Pool(config);
 
 
 
