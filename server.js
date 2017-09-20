@@ -24,7 +24,7 @@ HOST    :'sdhrsingh271',
 USER:'sdhrsingh271',
 DATABASE:'db.imad.hasura.io',
 PORT : "5432",
-PASSWORD:''
+PASSWORD: process.env.DB_PASWORD
 };
 
 var pool =new Pool(config);
