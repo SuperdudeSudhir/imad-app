@@ -1,6 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var Pool= require('pg').Pool;
 
 //var counter = 0;
 //app.get('/counter', function (req, res){
@@ -8,7 +9,15 @@ var path = require('path');
  // res.send(counter.toString());
     
 
-var Pool= require('pg').Pool;
+
+           var app = express();
+            app.use(morgan('combined'));
+            
+            
+            
+            
+            
+
 
 var config  = {
 HOST    :'sdhrsingh271',
@@ -36,10 +45,6 @@ app.get('/test-db',function(req,res)
 
 
 
-
-           var app = express();
-            app.use(morgan('combined'));
-            
             app.get('/', function (req, res) {
               res.sendFile(path.join(__dirname, 'ui', 'index.html'));
             });
